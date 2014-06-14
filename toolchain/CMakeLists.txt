@@ -8,6 +8,7 @@ ExternalProject_Add(binutils
         --disable-multilib
         --disable-nls
         --disable-shared
+        --disable-werror
     BUILD_COMMAND make -j${MAKEJOBS}
     INSTALL_COMMAND make install
     LOG_DOWNLOAD 1 LOG_CONFIGURE 1 LOG_BUILD 1 LOG_INSTALL 1
