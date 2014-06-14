@@ -37,7 +37,7 @@ To install ``ninja`` and ``cmake``, needed for preparing and executing the build
 
 To install all prerequisites for actually building 'mpv' and it's dependencies (32-bit and 64-bit):
 
-    pacman -S ragel yasm asciidoc enca wine wine_gecko wine-mono python-docutils python2-rst2pdf p7zip
+    pacman -S ragel yasm asciidoc enca wine wine_gecko wine-mono python-docutils python2-rst2pdf p7zip gcc-multilib
 
 Building Software
 -----------------
