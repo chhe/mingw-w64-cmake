@@ -24,6 +24,20 @@ GCC, Binutils, ragel, headers for GMP, MPFR and MPC).
     If you are looking for VM images with everything set up to work with this:
     `<https://github.com/lachs0r/mingw-w64-env>`_
 
+Installing prerequisites for Manjaro Linux 0.8.10 x86_64
+--------------------------------------------------------
+
+To install ``git``, so you will be able to clone this repo:
+
+    pacman -S git
+    
+To install ``ninja`` and ``cmake``, needed for preparing and executing the build:
+
+    pacman -S ninja cmake
+
+To install all prerequisites for actually building 'mpv' and it's dependencies (32-bit and 64-bit):
+
+    pacman -S ragel yasm asciidoc enca wine wine_gecko wine-mono python-docutils python2-rst2pdf p7zip
 
 Building Software
 -----------------
