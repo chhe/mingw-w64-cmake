@@ -27,11 +27,11 @@ GCC, Binutils, ragel, headers for GMP, MPFR and MPC).
 Installing prerequisites for Manjaro Linux 0.8.10 x86_64
 --------------------------------------------------------
 
-To install ``git``, so you will be able to clone this repo:
+To install ``git``, so you will be able to clone this repo::
 
     pacman -S git
     
-To install ``ninja`` and ``cmake``, needed for preparing and executing the build:
+To install ``ninja`` and ``cmake``, needed for preparing and executing the build::
 
     pacman -S ninja cmake
 
