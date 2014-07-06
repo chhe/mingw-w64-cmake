@@ -57,12 +57,12 @@ To install all prerequisites for actually building 'mpv' and it's dependencies (
 Building Software
 -----------------
 
-To set up the build environment, create a directory to store build files in::
+To set up the build environment for 64-Bit, create a directory to store build files in::
 
     mkdir build-64
     cd build-64
 
-Once you’ve changed into that directory, run CMake, e.g.::
+Once you’ve changed into that directory, run CMake::
 
     cmake -DTARGET_ARCH=x86_64-w64-mingw32 -DCMAKE_INSTALL_PREFIX=prefix -G Ninja ..
 
@@ -72,6 +72,13 @@ all of its dependencies::
     ninja mpv
 
 This will take a while (about 20 minutes on my machine).
+
+If you want to build the 32-Bit version of ``mpv`` follow these steps::
+	
+    mkdir build-32
+    cd build-32
+    cmake -DTARGET_ARCH=i686-w64-mingw32 -DCMAKE_INSTALL_PREFIX=../prefix-32 -DMAKEJOBS=2 -G Ninja ..
+    ninja mpv
 
 .. note::
     The mpv package has some additional steps to generate files ready
