@@ -24,6 +24,21 @@ GCC, Binutils, ragel, headers for GMP, MPFR and MPC).
     If you are looking for VM images with everything set up to work with this:
     `<https://github.com/lachs0r/mingw-w64-env>`_
 
+Installing prerequisites for Ubuntu 14.04 x86_64
+------------------------------------------------
+
+To install ``git``, so you will be able to clone this repo::
+
+    apt-get install git
+    
+To install ``ninja`` and ``cmake``, needed for preparing and executing the build::
+
+    apt-get install ninja-build cmake
+
+To install all prerequisites for building stuff (like ``g++`` etc.)::
+
+    apt-get install g++ yasm automake autoconf libtool gcc-multilib g++-multilib subversion libgmp-dev libmpfr-dev libmpc-dev libgcrypt-dev texinfo gperf wine ragel asciidoc autopoint python-docutils rst2pdf re2c
+
 Installing prerequisites for Manjaro Linux 0.8.10 x86_64
 --------------------------------------------------------
 
