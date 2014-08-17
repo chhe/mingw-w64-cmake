@@ -16,6 +16,7 @@ ExternalProject_Add(mpv
         libiconv
         libjpeg
         libpng
+        openal-soft
         luajit
         rubberband
         uchardet
@@ -29,6 +30,7 @@ ExternalProject_Add(mpv
         ${MPV_LDFLAGS}
         <SOURCE_DIR>/waf configure
         --enable-static-build
+        --enable-openal
         --enable-pdf-build
         --disable-manpage-build
         --enable-libmpv-shared
