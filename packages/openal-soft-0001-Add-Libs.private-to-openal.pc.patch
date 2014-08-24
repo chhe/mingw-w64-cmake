@@ -1,7 +1,7 @@
 From aa9cdd87f790d71093b0b458991ac19c6ee7f7fc Mon Sep 17 00:00:00 2001
 From: Martin Herkt <lachs0r@srsfckn.biz>
 Date: Sat, 7 Sep 2013 22:56:00 +0200
-Subject: [PATCH 1/2] Add Libs.private to openal.pc
+Subject: [PATCH 1/1] Add Libs.private to openal.pc
 
 ---
  CMakeLists.txt | 6 ++++++
