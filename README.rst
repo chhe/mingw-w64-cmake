@@ -24,6 +24,21 @@ GCC, Binutils, ragel, headers for GMP, MPFR and MPC).
     If you are looking for VM images with everything set up to work with this:
     `<https://github.com/lachs0r/mingw-w64-env>`_
 
+Installing prerequisites for Sabayon Linux 14.08 amd64 Xfce
+-----------------------------------------------------------
+
+To install ``git``, so you will be able to clone this repo::
+
+    equo install git
+    
+To install ``ninja`` and ``cmake``, needed for preparing and executing the build::
+
+    equo install dev-util/ninja dev-util/cmake
+
+To install all prerequisites for building stuff (like ``gcc`` etc.)::
+
+    equo install sys-devel/gcc dev-vcs/subversion sys-devel/autogen sys-devel/autoconf sys-devel/automake dev-util/ragel dev-lang/yasm app-emulation/wine dev-util/pkgconfig dev-python/rst2pdf dev-python/pip app-arch/p7zip
+
 Installing prerequisites for Ubuntu 14.04 x86_64
 ------------------------------------------------
 
@@ -35,7 +50,7 @@ To install ``ninja`` and ``cmake``, needed for preparing and executing the build
 
     apt-get install ninja-build cmake
 
-To install all prerequisites for building stuff (like ``g++`` etc.)::
+To install all prerequisites for building ``mpv`` and it's dependencies (32-bit and 64-bit)::
 
     apt-get install g++ yasm automake autoconf libtool gcc-multilib g++-multilib subversion libgmp-dev libmpfr-dev libmpc-dev libgcrypt-dev texinfo gperf wine ragel asciidoc autopoint python-docutils rst2pdf re2c
 
