@@ -35,7 +35,7 @@ To install ``ninja`` and ``cmake``, needed for preparing and executing the build
 
     equo install dev-util/ninja dev-util/cmake
 
-To install all prerequisites for building stuff (like ``gcc`` etc.)::
+To install all prerequisites for building ``mpv`` and it's dependencies (32-bit and 64-bit)::
 
     equo install sys-devel/gcc dev-vcs/subversion sys-devel/autogen sys-devel/autoconf sys-devel/automake dev-util/ragel dev-lang/yasm app-emulation/wine dev-util/pkgconfig dev-python/rst2pdf dev-python/pip app-arch/p7zip
 
