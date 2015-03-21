@@ -6,7 +6,7 @@ endif()
 
 ExternalProject_Add(harfbuzz
     DEPENDS freetype2 libpng
-    GIT_REPOSITORY "git://anongit.freedesktop.org/harfbuzz"
+    GIT_REPOSITORY "http://anongit.freedesktop.org/git/harfbuzz.git"
     UPDATE_COMMAND ""
     CONFIGURE_COMMAND ${EXEC} <SOURCE_DIR>/configure
         --host=${TARGET_ARCH}
