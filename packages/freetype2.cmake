@@ -11,7 +11,8 @@ ExternalProject_Add(freetype2
         --disable-shared
         --without-harfbuzz
         --with-sysroot=${MINGW_INSTALL_PREFIX}
-    BUILD_COMMAND ${MAKE}
+        --with-harfbuzz=no
+    BUILD_COMMAND ${MAKE} clean && ${MAKE}
     INSTALL_COMMAND ${MAKE} install
         COMMAND ${CMAKE_COMMAND} -E create_symlink ${MINGW_INSTALL_PREFIX}/bin/freetype-config ${CMAKE_INSTALL_PREFIX}/bin/freetype-config
     LOG_DOWNLOAD 1 LOG_UPDATE 1 LOG_CONFIGURE 1 LOG_BUILD 1 LOG_INSTALL 1
