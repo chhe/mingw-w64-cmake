@@ -3,7 +3,7 @@
 ## Installing prerequisites
 
 ```
-sudo apt-get install re2c ragel texinfo libgmp-dev libmpfr-dev libmpc-dev gperf flex bison
+sudo apt-get install libtool autoconf gettext re2c ragel texinfo libgmp-dev libmpfr-dev libmpc-dev gperf flex bison libcurl4-gnutls-dev
 ```
 
 ## Building Automake
@@ -18,16 +18,16 @@ $ make
 $ sudo make install
 ```
 
-## Getting Ninja
+## Building Ninja
 
 ```
 $ git clone git://github.com/martine/ninja.git && cd ninja
 $ git checkout release
 $ ./configure.py --bootstrap
-$ cp ./ninja /usr/local/bin/
+$ sudo cp ./ninja /usr/local/bin/
 ```
 
-## Getting CMake
+## Building CMake
 
 ```
 $ wget http://www.cmake.org/files/v3.2/cmake-3.2.1.tar.gz
@@ -38,7 +38,7 @@ $ make
 $ sudo make install
 ```
 
-## Getting Yasm
+## Building Yasm
 
 ```
 $ git clone https://github.com/yasm/yasm.git && cd yasm
@@ -51,11 +51,11 @@ $ sudo make install
 ## Building Wine
 
 ```
-$ wget http://prdownloads.sourceforge.net/wine/wine-1.6.2.tar.bz2
-$ tar -xpvjf wine-1.6.2.tar.bz2
-$ cd wine-1.6.2
+#$ wget http://prdownloads.sourceforge.net/wine/wine-1.6.2.tar.bz2
+#$ tar -xpvjf wine-1.6.2.tar.bz2 && cd wine-1.6.2
+$ wget http://prdownloads.sourceforge.net/wine/wine-1.7.45.tar.bz2
+$ tar -xpvjf wine-1.7.45.tar.bz2 && cd wine-1.7.45
 $ ./configure --without-x
 $ make
 $ sudo make install
-$
 ```
