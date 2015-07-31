@@ -104,6 +104,13 @@ If you want to build the 32-Bit version of ``mpv`` follow these steps::
     development sources, use ``-DENABLE_VCS_UPDATES=false`` on the CMake
     command line.
 
+There is shell-script to automate this process. Call::
+
+    ./start-build.sh 32
+
+to build the 32-bit version. To build its 64-bit counterpart start::
+
+    ./start-build.sh 64
 
 Unpackaged Stuff
 ~~~~~~~~~~~~~~~~
