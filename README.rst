@@ -96,7 +96,7 @@ If you want to build the 32-Bit version of ``mpv`` follow these steps::
     ninja mpv
 
 .. note::
-    The mpv package has some additional steps to generate files ready
+    The mpv package has some additional steps to generate a 7zip archive ready
     for distribution instead of installing it to the prefix.
 
 .. note::
