@@ -1,7 +1,8 @@
 #!/bin/bash
 # $1: target architecture bit-width = [32|64]
 
-PACKAGES_TO_REMOVE=( ffmpeg lame libvpx mpv )
+#PACKAGES_TO_REMOVE=( ffmpeg lame libvpx mpv )
+PACKAGES_TO_REMOVE=( )
 
 if [ "$1" == 32 ]; then
   arch="i686-w64-mingw32"
