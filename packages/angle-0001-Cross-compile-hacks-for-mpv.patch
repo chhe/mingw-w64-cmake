@@ -39,7 +39,12 @@ index 0000000..19343a5
 +.PHONY: clean
 +
 +install: $(TARGET)
-+	$(INSTALL) -d $(INCLUDEDIR)/{EGL,GLES{2,3},GLSLANG,KHR,platform}
++	$(INSTALL) -d $(INCLUDEDIR)/EGL
++	$(INSTALL) -d $(INCLUDEDIR)/GLES2
++	$(INSTALL) -d $(INCLUDEDIR)/GLES3
++	$(INSTALL) -d $(INCLUDEDIR)/GLSLANG
++	$(INSTALL) -d $(INCLUDEDIR)/KHR
++	$(INSTALL) -d $(INCLUDEDIR)/platform
 +	$(INSTALL) -d $(BINDIR)
 +	$(INSTALL) -d $(LIBDIR)
 +	$(INSTALL) -d $(LIBDIR)/pkgconfig
@@ -53,10 +58,17 @@ index 0000000..19343a5
 +	$(INSTALL) -m 644 libEGL.a libGLESv2.a $(LIBDIR)
 +
 +uninstall:
-+	-rm -f $(BINDIR)/lib{EGL,GLESv2}.dll
-+	-rm -f $(LIBDIR)/lib{EGL,GLESv2}.dll.a
-+	-rm -f $(LIBDIR)/lib{EGL,GLESv2}.a
-+	-rm -rf $(INCLUDEDIR)/{EGL,GLES{2,3},GLSLANG,KHR}
++	-rm -f $(BINDIR)/libEGL.dll
++	-rm -f $(BINDIR)/libGLESv2.dll
++	-rm -f $(LIBDIR)/libEGL.dll.a
++	-rm -f $(LIBDIR)/libGLESv2.dll.a
++	-rm -f $(LIBDIR)/libEGL.a
++	-rm -f $(LIBDIR)/libGLESv2.a
++	-rm -rf $(INCLUDEDIR)/EGL
++	-rm -rf $(INCLUDEDIR)/GLES2
++	-rm -rf $(INCLUDEDIR)/GLES3
++	-rm -rf $(INCLUDEDIR)/GLSLANG
++	-rm -rf $(INCLUDEDIR)/KHR
 +	-rm -f $(INCLUDEDIR)/platform/Platform.h
 +	-rm -f $(INCLUDEDIR)/angle_gl.h
 +.PHONY: uninstall
