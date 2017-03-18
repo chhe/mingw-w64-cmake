@@ -91,12 +91,14 @@ foreach(package
     libdvdread
     libdvdnav
     libiconv
+    sdl2
     luajit
     openal-soft
     fribidi
     expat
     libarchive
     freetype2
+    sdl2_ttf
     libbluray
     harfbuzz
     libass
