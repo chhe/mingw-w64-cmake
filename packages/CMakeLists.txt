@@ -66,7 +66,6 @@ endfunction()
 foreach(package
     libsoxr
     libzimg
-    angle
     gmp
     xz
     lzo
@@ -103,6 +102,7 @@ foreach(package
     harfbuzz
     libass
     ffmpeg
+    angle
     mpv
 )
     include(${CMAKE_CURRENT_SOURCE_DIR}/${package}.cmake)
