@@ -1,12 +1,19 @@
+if(${TARGET_CPU} MATCHES "x86_64")
+    set(target "x64")
+else()
+    set(target "x86")
+endif()
+
 ExternalProject_Add(angle
     DEPENDS
         ffmpeg
     GIT_REPOSITORY https://chromium.googlesource.com/angle/angle
+    GIT_TAG 9f10b775c9b17f901d940157e43e5a74b75c2708
     UPDATE_COMMAND ""
     PATCH_COMMAND ${EXEC} git am ${CMAKE_CURRENT_SOURCE_DIR}/angle-*.patch
     CONFIGURE_COMMAND gyp -Duse_ozone=0 -DOS=win -Dangle_gl_library_type=static_library
         -Dangle_use_commit_id=1 --depth . -I gyp/common.gypi src/angle.gyp --no-parallel
-        --format=make --generator-output=generated -Dangle_enable_vulkan=0
+        --format=make --generator-output=generated -Dangle_enable_vulkan=0 -Dtarget_cpu=${target}
     BUILD_COMMAND ""
     INSTALL_COMMAND ${MAKE}
         PREFIX=${MINGW_INSTALL_PREFIX}
@@ -49,7 +56,7 @@ ExternalProject_Add_Step(angle clean-buildfiles
    COMMAND rm -R <SOURCE_DIR>/generated
 )
 
-force_rebuild_git(angle)
+#force_rebuild_git(angle)
 
 # This is too confusing
 # DEPENDEES: Steps on which this step depends
